@@ -24,7 +24,7 @@ include("signal_functions.jl")
 
 export Signal, Wave, Spectrum, Integrated_Spectrum
 export BrownianNoise, PinkNoise, GaussianNoise, WhiteNoise
-export slope, latexify, triangle, squarewave
+export slope, latexify, period, triangle, squarewave
 
 
 
