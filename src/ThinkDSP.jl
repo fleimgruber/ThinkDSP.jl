@@ -11,10 +11,10 @@ import Base: +, filter, *
 import Latexify: latexify
 import WAV: wavplay
 
-
+include("Types.jl")
 include("Signal.jl")
-include("Spectrum.jl")
 include("Wave.jl")
+include("Spectrum.jl")
 include("Noise.jl")
 
 include("struct_functions.jl")

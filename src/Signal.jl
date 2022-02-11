@@ -1,25 +1,9 @@
-struct Signal
-    freq::Union{Vector,Number}
-    amp::Union{Vector,Number}
-    func::Union{Vector,Function}
-    offset::Union{Vector,Number}
-    info::Dict
-    function Signal(fr, a, f = sin, o = 0, info = Dict(); name::String = "")
-        if !isempty(name)
-            info["name"] = name
-        end
-        new(fr, a, f, o, info)
-    end
-end
-
-
 function Signal(; freq, amp, f = sin, offset = 0, info = Dict(), name::String = "")
     if !isempty(name)
         info["name"] = name
     end
     Signal(freq, amp, f, offset, info)
 end
-
 
 function latexify(s::Signal)
     name = "signal"

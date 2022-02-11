@@ -1,13 +1,3 @@
-struct Spectrum
-    amps::Any
-    fs::Any
-    power::Any
-    signal::Signal
-    framerate::Number
-    #start # start time of the signal
-    d::Any # length of the converted wave
-end
-
 function Spectrum(w::Wave)
     amps = rfft(w.amps)
     fs = rfftfreq(length(w.amps), w.framerate)

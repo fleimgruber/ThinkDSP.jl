@@ -1,11 +1,3 @@
-struct Wave
-    amps::Vector
-    time::Any
-    framerate::Number
-    signal::Signal
-    #isnoise::Bool
-end
-
 function Wave(s::Signal; t = 0, framerate = 44_100)
     if t == 0
         freq = s.freq
